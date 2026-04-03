@@ -11,23 +11,32 @@ interface CameraViewProps {
 export function CameraView({ onIdentified, onManualSearch }: CameraViewProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [stream, setStream] = useState<MediaStream | null>(null);
+  const streamRef = useRef<MediaStream | null>(null);
   const [cameraError, setCameraError] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const stopStream = useCallback(() => {
+    streamRef.current?.getTracks().forEach((track) => track.stop());
+    streamRef.current = null;
+    if (videoRef.current) videoRef.current.srcObject = null;
+  }, []);
+
   useEffect(() => {
     startCamera();
-    return () => { stream?.getTracks().forEach(t => t.stop()); };
+    return () => {
+      stopStream();
+    };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const startCamera = async () => {
     try {
+      stopStream();
       const mediaStream = await navigator.mediaDevices.getUserMedia({
         video: { facingMode: 'environment', width: { ideal: 1280 }, height: { ideal: 960 } },
       });
-      setStream(mediaStream);
+      streamRef.current = mediaStream;
       if (videoRef.current) videoRef.current.srcObject = mediaStream;
     } catch {
       setCameraError(true);
@@ -44,11 +53,17 @@ export function CameraView({ onIdentified, onManualSearch }: CameraViewProps) {
     canvas.width = 1280;
     canvas.height = 960;
     const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+    if (!ctx) {
+      setLoading(false);
+      return;
+    }
     ctx.drawImage(video, 0, 0, 1280, 960);
 
     canvas.toBlob(async (blob) => {
-      if (!blob) return;
+      if (!blob) {
+        setLoading(false);
+        return;
+      }
       const formData = new FormData();
       formData.append('image', blob, 'photo.jpg');
 
@@ -104,10 +119,10 @@ export function CameraView({ onIdentified, onManualSearch }: CameraViewProps) {
         <div className="relative w-full max-w-sm aspect-[4/3] rounded-2xl overflow-hidden bg-black mb-4">
           <video ref={videoRef} autoPlay playsInline muted className="w-full h-full object-cover" />
           <div className="absolute inset-4 border-2 border-white/50 rounded-lg pointer-events-none">
-            <div className="absolute top-0 left-0 w-8 h-8 border-t-3 border-l-3 border-white rounded-tl-lg" />
-            <div className="absolute top-0 right-0 w-8 h-8 border-t-3 border-r-3 border-white rounded-tr-lg" />
-            <div className="absolute bottom-0 left-0 w-8 h-8 border-b-3 border-l-3 border-white rounded-bl-lg" />
-            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-3 border-r-3 border-white rounded-br-lg" />
+            <div className="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-white rounded-tl-lg" />
+            <div className="absolute top-0 right-0 w-8 h-8 border-t-4 border-r-4 border-white rounded-tr-lg" />
+            <div className="absolute bottom-0 left-0 w-8 h-8 border-b-4 border-l-4 border-white rounded-bl-lg" />
+            <div className="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-white rounded-br-lg" />
           </div>
         </div>
       ) : (
