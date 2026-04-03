@@ -11,263 +11,263 @@
     },
     {
       "id": "nissin-cup-noodle-seafood",
-      "name": "カップヌードル シーフードヌードル",
+      "name": "カップヌードルシーフード",
       "maker": "日清食品",
       "optimalTime": 195,
-      "reason": "魚介の旨味が強い白濁スープは早めに麺へなじむため、やや短めで止めるとコシと一体感のバランスが整います。",
-      "keywords": ["シーフードヌードル", "カップヌードル", "日清"],
+      "reason": "魚介とポークの香りは待ちすぎると重くなるため、195秒で開けると麺のコシを残しつつスープの甘みが最もはっきり出ます。",
+      "keywords": ["シーフードヌードル", "カップヌードルシーフード", "日清"],
       "category": "油揚げ麺"
     },
     {
-      "id": "nissin-chicken-ramen-donburi",
-      "name": "チキンラーメンどんぶり",
+      "id": "nissin-chicken-ramen",
+      "name": "チキンラーメン",
       "maker": "日清食品",
       "optimalTime": 195,
-      "reason": "味付き麺は戻りが早いので、3分強で止めると香ばしさを保ちながら表面だけがやわらかく整います。",
-      "keywords": ["チキンラーメン", "どんぶり", "日清"],
+      "reason": "細めの油揚げ麺は3分強でほぐれ切り、195秒前後が香ばしさとやわらかさのバランスを最も取りやすいタイミングです。",
+      "keywords": ["チキンラーメン", "チキラー", "日清"],
       "category": "油揚げ麺"
     },
     {
       "id": "nissin-donbei-kitsune-udon",
-      "name": "日清のどん兵衛 きつねうどん",
+      "name": "どん兵衛きつねうどん",
       "maker": "日清食品",
       "optimalTime": 300,
-      "reason": "太めのうどんは5分で芯まで戻り、つゆの甘みともちっとした口当たりが最も安定します。",
+      "reason": "太めのうどん麺は5分しっかり置くことで芯の硬さが抜け、つゆを吸ったふっくら食感と揚げの甘みがきれいになじみます。",
       "keywords": ["どん兵衛", "きつねうどん", "日清"],
-      "category": "うどん"
+      "category": "油揚げ麺"
     },
     {
-      "id": "maruchan-akai-kitsune-udon",
+      "id": "toyo-suisan-akai-kitsune-udon",
       "name": "赤いきつねうどん",
       "maker": "東洋水産",
       "optimalTime": 300,
-      "reason": "だし感の強いつゆに合わせて5分置くと、うどんが十分に水分を含み、ふっくらした食感になります。",
-      "keywords": ["赤いきつね", "うどん", "マルちゃん"],
-      "category": "うどん"
+      "reason": "厚みのあるうどん麺がつゆを抱えるまで少し時間が必要で、300秒待つと麺のもっちり感とだしの輪郭が最も安定します。",
+      "keywords": ["赤いきつね", "きつねうどん", "マルちゃん"],
+      "category": "油揚げ麺"
     },
     {
-      "id": "maruchan-midori-no-tanuki",
+      "id": "toyo-suisan-midori-no-tanuki-tensoba",
       "name": "緑のたぬき天そば",
       "maker": "東洋水産",
       "optimalTime": 270,
-      "reason": "そばは置きすぎると切れやすいため、4分半前後で止めると香りとほぐれの良さが両立します。",
+      "reason": "そば麺は待ちすぎると輪郭がぼやけやすく、270秒で湯戻しを止めるとだし感と歯切れの良さを両立できます。",
       "keywords": ["緑のたぬき", "天そば", "マルちゃん"],
-      "category": "そば"
+      "category": "油揚げ麺"
     },
     {
-      "id": "peyoung-sauce-yakisoba",
+      "id": "maruka-peyang-sauce-yakisoba",
       "name": "ペヤングソースやきそば",
       "maker": "まるか食品",
       "optimalTime": 180,
-      "reason": "細めの焼そば麺は3分で湯切りすると、ソースを絡めたあともべたつかず軽快な食感が残ります。",
-      "keywords": ["ペヤング", "ソースやきそば", "やきそば"],
-      "category": "焼そば"
-    },
-    {
-      "id": "nissin-ufo",
-      "name": "日清焼そばU.F.O.",
-      "maker": "日清食品",
-      "optimalTime": 210,
-      "reason": "もっちり感を出したい太麺タイプなので、3分半ほどで湯切りすると濃厚ソースとの一体感が高まります。",
-      "keywords": ["U.F.O.", "焼そば", "日清"],
-      "category": "焼そば"
-    },
-    {
-      "id": "nissin-raoh-seabura-shoyu",
-      "name": "日清ラ王 背脂醤油",
-      "maker": "日清食品",
-      "optimalTime": 300,
-      "reason": "ノンフライの太麺は5分でしっかり戻り、背脂醤油スープに負けない弾力が出ます。",
-      "keywords": ["ラ王", "背脂醤油", "日清"],
+      "reason": "やや短めの180秒で湯切りすると麺肌が締まり、濃いソースをかけたときにベタつかず軽快な食べ心地になります。",
+      "keywords": ["ペヤング", "ソースやきそば", "まるか食品"],
       "category": "ノンフライ麺"
     },
     {
-      "id": "nissin-curry-meshi-beef",
-      "name": "日清カレーメシ ビーフ",
+      "id": "nissin-ufo",
+      "name": "U.F.O.",
+      "maker": "日清食品",
+      "optimalTime": 210,
+      "reason": "太めのやきそば麺は210秒でちょうど弾力が整い、ソースの濃さに負けない噛み応えが出ます。",
+      "keywords": ["U.F.O.", "焼そばU.F.O.", "日清"],
+      "category": "ノンフライ麺"
+    },
+    {
+      "id": "nissin-raoh",
+      "name": "ラ王",
       "maker": "日清食品",
       "optimalTime": 300,
-      "reason": "ライス粒が均一にほぐれてとろみが完成するまで約5分必要で、混ぜたときの粘度が最も安定します。",
-      "keywords": ["カレーメシ", "ビーフ", "日清"],
-      "category": "カップ飯"
+      "reason": "ノンフライの太麺は5分置くと内部まで均一に戻り、生麺らしいしなやかさとスープの一体感が最も高まります。",
+      "keywords": ["ラ王", "生麺食感", "日清"],
+      "category": "ノンフライ麺"
+    },
+    {
+      "id": "nissin-curry-meshi",
+      "name": "カレーメシ",
+      "maker": "日清食品",
+      "optimalTime": 300,
+      "reason": "米粒が中央まで水を含むのに約5分必要で、300秒でほぐすとルウのとろみと粒立ちが最も自然にまとまります。",
+      "keywords": ["カレーメシ", "カレー", "日清"],
+      "category": "その他"
     },
     {
       "id": "nissin-cup-noodle-curry",
-      "name": "カップヌードル カレー",
+      "name": "カップヌードルカレー",
       "maker": "日清食品",
-      "optimalTime": 205,
-      "reason": "とろみのあるカレースープは少し長めに置くと麺の表面によく絡み、まとまりのよい食感になります。",
-      "keywords": ["カップヌードル", "カレー", "日清"],
+      "optimalTime": 214,
+      "reason": "カレーのとろみが強いため少し長めの214秒が合いやすく、麺の表面にスープがしっかり絡んで満足感が増します。",
+      "keywords": ["カップヌードルカレー", "カレー", "日清"],
+      "category": "油揚げ麺"
+    },
+    {
+      "id": "nissin-cup-noodle-miso",
+      "name": "カップヌードル味噌",
+      "maker": "日清食品",
+      "optimalTime": 220,
+      "reason": "味噌の濃度が高い分だけ麺の戻りを少し待つと一体感が出やすく、220秒でコクと弾力の釣り合いが整います。",
+      "keywords": ["カップヌードル味噌", "味噌", "日清"],
       "category": "油揚げ麺"
     },
     {
       "id": "nissin-cup-noodle-european-cheese-curry",
-      "name": "カップヌードル 欧風チーズカレー",
+      "name": "カップヌードル欧風チーズカレー",
       "maker": "日清食品",
-      "optimalTime": 215,
-      "reason": "濃厚で粘度の高いスープに合わせ、やや長めに待つと麺の芯までまろやかなコクがなじみます。",
-      "keywords": ["欧風チーズカレー", "カップヌードル", "日清"],
+      "optimalTime": 238,
+      "reason": "欧風カレーのまろやかさを活かすには240秒弱が好相性で、チーズ風味が立ちつつ麺もなめらかにほぐれます。",
+      "keywords": ["欧風チーズカレー", "チーズカレー", "日清"],
+      "category": "油揚げ麺"
+    },
+    {
+      "id": "nissin-donbei-tempura-soba",
+      "name": "どん兵衛天ぷらそば",
+      "maker": "日清食品",
+      "optimalTime": 290,
+      "reason": "そば麺と天ぷらの香りのバランスを考えると290秒がちょうどよく、だしの立ち上がりを残したまま麺がやわらぎます。",
+      "keywords": ["どん兵衛", "天ぷらそば", "日清"],
       "category": "油揚げ麺"
     },
     {
       "id": "nissin-men-shokunin-shoyu",
-      "name": "日清 麺職人 醤油",
+      "name": "日清麺職人 醤油",
       "maker": "日清食品",
-      "optimalTime": 270,
-      "reason": "細めのノンフライ麺は4分半前後で張りを保ちつつ、澄んだ醤油スープとの一体感が出ます。",
+      "optimalTime": 240,
+      "reason": "ノンフライ細麺は4分前後で均一に戻り、240秒で開けると醤油スープのキレと麺のハリが最も保ちやすいです。",
       "keywords": ["麺職人", "醤油", "日清"],
       "category": "ノンフライ麺"
     },
     {
-      "id": "nissin-men-shokunin-tantanmen",
-      "name": "日清 麺職人 担々麺",
+      "id": "nissin-mouko-tanmen-nakamoto",
+      "name": "蒙古タンメン中本 辛旨味噌",
       "maker": "日清食品",
-      "optimalTime": 275,
-      "reason": "ごまのコクが強いスープなので、少し長めに置くとノンフライ麺のしなやかさが引き立ちます。",
-      "keywords": ["麺職人", "担々麺", "日清"],
-      "category": "ノンフライ麺"
-    },
-    {
-      "id": "nissin-men-nippon-hachioji-shoyu",
-      "name": "日清麺NIPPON 八王子たまねぎ醤油ラーメン",
-      "maker": "日清食品",
-      "optimalTime": 280,
-      "reason": "香味野菜の甘みを生かすには、麺がほどよくほぐれる4分40秒前後が最もバランスよく仕上がります。",
-      "keywords": ["麺NIPPON", "八王子", "日清"],
-      "category": "ノンフライ麺"
-    },
-    {
-      "id": "maruchan-qtta-koku-shoyu",
-      "name": "MARUCHAN QTTA コクしょうゆ味",
-      "maker": "東洋水産",
-      "optimalTime": 190,
-      "reason": "ラードの香ばしさが特徴の油揚げ麺は、少し短めで止めると歯切れのよさとコクが際立ちます。",
-      "keywords": ["QTTA", "コクしょうゆ", "マルちゃん"],
-      "category": "油揚げ麺"
-    },
-    {
-      "id": "maruchan-qtta-seafood",
-      "name": "MARUCHAN QTTA シーフード味",
-      "maker": "東洋水産",
-      "optimalTime": 190,
-      "reason": "魚介系スープは早めから味が立つため、3分強で止めると麺の弾みと旨味の輪郭が残ります。",
-      "keywords": ["QTTA", "シーフード", "マルちゃん"],
-      "category": "油揚げ麺"
-    },
-    {
-      "id": "maruchan-gotsumori-sauce-yakisoba",
-      "name": "ごつ盛り ソース焼そば",
-      "maker": "東洋水産",
-      "optimalTime": 180,
-      "reason": "量の多い焼そばでも3分湯戻しで十分にほぐれ、湯切り後にソースが均一に絡みます。",
-      "keywords": ["ごつ盛り", "ソース焼そば", "マルちゃん"],
-      "category": "焼そば"
-    },
-    {
-      "id": "maruchan-gotsumori-corn-miso",
-      "name": "ごつ盛り コーン味噌ラーメン",
-      "maker": "東洋水産",
-      "optimalTime": 205,
-      "reason": "味噌の厚みを麺に乗せるには少し長めが向いており、3分25秒ほどで全体の一体感が整います。",
-      "keywords": ["ごつ盛り", "コーン味噌", "マルちゃん"],
-      "category": "油揚げ麺"
-    },
-    {
-      "id": "maruchan-men-zukuri-chicken-soy-sauce",
-      "name": "麺づくり 鶏ガラ醤油",
-      "maker": "東洋水産",
-      "optimalTime": 270,
-      "reason": "なめらかなノンフライ細麺は4分半で最も自然にほどけ、淡麗スープとの相性がよくなります。",
-      "keywords": ["麺づくり", "鶏ガラ醤油", "マルちゃん"],
-      "category": "ノンフライ麺"
-    },
-    {
-      "id": "maruchan-men-zukuri-awase-miso",
-      "name": "麺づくり 合わせ味噌",
-      "maker": "東洋水産",
-      "optimalTime": 280,
-      "reason": "味噌スープの濃度に合わせて少し長めに置くと、ノンフライ麺がしっとりとしつつ伸びすぎません。",
-      "keywords": ["麺づくり", "合わせ味噌", "マルちゃん"],
-      "category": "ノンフライ麺"
-    },
-    {
-      "id": "acecook-wakame-ramen-goma-shoyu",
-      "name": "わかめラーメン ごま・しょうゆ",
-      "maker": "エースコック",
-      "optimalTime": 195,
-      "reason": "わかめが広がる時間も考えると3分15秒前後がちょうどよく、麺の軽さも保てます。",
-      "keywords": ["わかめラーメン", "ごま・しょうゆ", "エースコック"],
-      "category": "油揚げ麺"
-    },
-    {
-      "id": "acecook-super-cup-shoyu",
-      "name": "スーパーカップ1.5倍 しょうゆラーメン",
-      "maker": "エースコック",
-      "optimalTime": 200,
-      "reason": "ボリューム麺でも3分20秒ほどで戻りきり、食べ始めから終盤まで食感が安定しやすくなります。",
-      "keywords": ["スーパーカップ", "しょうゆ", "エースコック"],
+      "optimalTime": 300,
+      "reason": "味噌と辛味油が強い一杯は5分置くと麺が負けず、辛さの角が少し取れてスープ全体がまとまって感じられます。",
+      "keywords": ["蒙古タンメン中本", "辛旨味噌", "日清"],
       "category": "油揚げ麺"
     },
     {
       "id": "myojo-ippeichan-yomise-no-yakisoba",
-      "name": "明星 一平ちゃん夜店の焼そば",
+      "name": "一平ちゃん夜店の焼そば",
       "maker": "明星食品",
-      "optimalTime": 180,
-      "reason": "3分で湯切りすると麺の弾力が残り、特製ソースとからしマヨの重さにも負けません。",
+      "optimalTime": 185,
+      "reason": "やきそば麺は185秒で湯切りするとほどよい硬さが残り、ソースとからしマヨの重さを受け止めやすくなります。",
       "keywords": ["一平ちゃん", "夜店の焼そば", "明星"],
-      "category": "焼そば"
+      "category": "油揚げ麺"
     },
     {
-      "id": "myojo-charumera-cup-shoyu",
-      "name": "明星 チャルメラカップ しょうゆ",
+      "id": "myojo-charumera-donburi-houjun-shoyu",
+      "name": "チャルメラどんぶり 芳醇しょうゆ",
       "maker": "明星食品",
-      "optimalTime": 195,
-      "reason": "香味野菜の効いた醤油スープは3分強で麺となじみ、軽快で食べやすい仕上がりになります。",
-      "keywords": ["チャルメラ", "しょうゆ", "明星"],
+      "optimalTime": 175,
+      "reason": "軽めのしょうゆ味は175秒で開けると麺がだれにくく、香味野菜の風味も飛ばさずすっきり食べられます。",
+      "keywords": ["チャルメラ", "芳醇しょうゆ", "明星"],
+      "category": "油揚げ麺"
+    },
+    {
+      "id": "myojo-mengami-cup-noukou-miso",
+      "name": "麺神カップ 濃香味噌",
+      "maker": "明星食品",
+      "optimalTime": 255,
+      "reason": "厚みのあるノンフライ麺は255秒で中心まで戻りやすく、濃い味噌スープでももっちり感が埋もれません。",
+      "keywords": ["麺神", "濃香味噌", "明星"],
+      "category": "ノンフライ麺"
+    },
+    {
+      "id": "sanyo-sapporo-ichiban-shoyu-donburi",
+      "name": "サッポロ一番 しょうゆ味どんぶり",
+      "maker": "サンヨー食品",
+      "optimalTime": 172,
+      "reason": "昔ながらの軽い揚げ麺は172秒ほどでほぐれ切り、しょうゆの香りを立たせながら歯切れも残せます。",
+      "keywords": ["サッポロ一番", "しょうゆ味どんぶり", "サンヨー食品"],
       "category": "油揚げ麺"
     },
     {
       "id": "sanyo-sapporo-ichiban-miso-donburi",
       "name": "サッポロ一番 みそラーメンどんぶり",
       "maker": "サンヨー食品",
-      "optimalTime": 200,
-      "reason": "みその厚みを麺にのせるには3分20秒前後がよく、香りと丸みのある口当たりが出ます。",
-      "keywords": ["サッポロ一番", "みそ", "サンヨー食品"],
+      "optimalTime": 180,
+      "reason": "みそ味は麺を少しだけ長めに戻すと角が取れ、180秒でスープの甘みと油揚げ麺の香ばしさがきれいにつながります。",
+      "keywords": ["サッポロ一番", "みそラーメン", "サンヨー食品"],
       "category": "油揚げ麺"
     },
     {
       "id": "sanyo-sapporo-ichiban-shio-donburi",
       "name": "サッポロ一番 塩らーめんどんぶり",
       "maker": "サンヨー食品",
-      "optimalTime": 195,
-      "reason": "塩味は輪郭が立ちやすいため、やや短めで止めると麺の張りとスープのキレが両立します。",
+      "optimalTime": 176,
+      "reason": "塩味は伸ばしすぎるとぼやけやすいため176秒が好相性で、透明感のあるスープと麺の軽さが両立します。",
       "keywords": ["サッポロ一番", "塩らーめん", "サンヨー食品"],
       "category": "油揚げ麺"
     },
     {
-      "id": "yamadai-sugomen-negi-miso",
-      "name": "凄麺 ねぎみその逸品",
-      "maker": "ヤマダイ",
-      "optimalTime": 300,
-      "reason": "本格寄りのノンフライ太麺は5分で最も自然な弾力になり、味噌の深みも十分にまといます。",
-      "keywords": ["凄麺", "ねぎみそ", "ヤマダイ"],
-      "category": "ノンフライ麺"
-    },
-    {
-      "id": "yamadai-sugomen-sendai-karamiso",
-      "name": "凄麺 仙台辛味噌ラーメン",
-      "maker": "ヤマダイ",
+      "id": "sanyo-junren-sapporo-noukou-miso",
+      "name": "名店の味 純連 札幌濃厚みそ",
+      "maker": "サンヨー食品",
       "optimalTime": 305,
-      "reason": "辛味噌の濃いスープに負けない太麺なので、5分少々で戻すと噛み応えと一体感が高まります。",
-      "keywords": ["凄麺", "仙台辛味噌", "ヤマダイ"],
+      "reason": "濃厚味噌スープに合わせるにはしっかり長めが向き、305秒置くと札幌系らしい重厚さと麺のなめらかさが整います。",
+      "keywords": ["純連", "札幌濃厚みそ", "サンヨー食品"],
+      "category": "油揚げ麺"
+    },
+    {
+      "id": "toyo-suisan-qtta-koku-shoyu",
+      "name": "QTTA コクしょうゆ味",
+      "maker": "東洋水産",
+      "optimalTime": 178,
+      "reason": "つやのある麺は178秒で戻すと弾みが残り、濃いめのしょうゆだれでも重たくなりすぎません。",
+      "keywords": ["QTTA", "コクしょうゆ", "マルちゃん"],
+      "category": "油揚げ麺"
+    },
+    {
+      "id": "toyo-suisan-gotsumori-sauce-yakisoba",
+      "name": "ごつ盛りソース焼そば",
+      "maker": "東洋水産",
+      "optimalTime": 182,
+      "reason": "大盛り麺は182秒で湯切りすると表面の水分が過多になりにくく、ソースを最後まで均一に絡めやすいです。",
+      "keywords": ["ごつ盛り", "ソース焼そば", "マルちゃん"],
+      "category": "油揚げ麺"
+    },
+    {
+      "id": "toyo-suisan-mendukuri-torigara-shoyu",
+      "name": "麺づくり 鶏ガラ醤油",
+      "maker": "東洋水産",
+      "optimalTime": 300,
+      "reason": "ノンフライ麺は300秒で芯まで戻り、鶏ガラ醤油の澄んだスープの中でも麺のしなやかさがはっきり出ます。",
+      "keywords": ["麺づくり", "鶏ガラ醤油", "マルちゃん"],
       "category": "ノンフライ麺"
     },
     {
-      "id": "yamadai-sugomen-kyoto-seabura-shoyu",
-      "name": "凄麺 京都背脂醤油味",
+      "id": "acecook-wakame-ramen-goma-shoyu",
+      "name": "わかめラーメン ごま・しょうゆ",
+      "maker": "エースコック",
+      "optimalTime": 175,
+      "reason": "わかめ由来の風味を活かすには175秒が扱いやすく、麺の軽さを保ったままごま醤油の香りが立ちます。",
+      "keywords": ["わかめラーメン", "ごま・しょうゆ", "エースコック"],
+      "category": "油揚げ麺"
+    },
+    {
+      "id": "acecook-super-cup-jukusei-miso",
+      "name": "スーパーカップ1.5倍 熟成味噌ラーメン",
+      "maker": "エースコック",
+      "optimalTime": 188,
+      "reason": "太めの麺量が多いので188秒がちょうどよく、味噌の濃さに対して食べ応えとほぐれ具合のバランスが取れます。",
+      "keywords": ["スーパーカップ", "熟成味噌", "エースコック"],
+      "category": "油揚げ麺"
+    },
+    {
+      "id": "acecook-nomihosu-ippai-tantanmen",
+      "name": "飲み干す一杯 担担麺",
+      "maker": "エースコック",
+      "optimalTime": 205,
+      "reason": "ごまのコクが強い担担麺は205秒で麺がなじみやすく、辛味とまろやかさが分離せずまとまって感じられます。",
+      "keywords": ["飲み干す一杯", "担担麺", "エースコック"],
+      "category": "油揚げ麺"
+    },
+    {
+      "id": "yamadai-sugomen-sapporo-noukou-miso",
+      "name": "凄麺 札幌濃厚味噌ラーメン",
       "maker": "ヤマダイ",
       "optimalTime": 300,
-      "reason": "背脂のコクを受け止めるノンフライ麺は5分でまとまり、つるみと弾力の両方を楽しめます。",
-      "keywords": ["凄麺", "京都背脂醤油", "ヤマダイ"],
+      "reason": "凄麺のノンフライ太麺は300秒で最も自然に戻り、濃厚味噌に対しても札幌系らしいもっちり感が残ります。",
+      "keywords": ["凄麺", "札幌濃厚味噌", "ヤマダイ"],
       "category": "ノンフライ麺"
     }
   ]
