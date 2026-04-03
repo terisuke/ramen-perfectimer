@@ -1,0 +1,10 @@
+{
+  "name": "ラーメン パーフェクトタイマー",
+  "short_name": "ラーメンタイマー",
+  "description": "カップラーメンのパッケージを撮るだけで、完璧な待ち時間がわかる",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF8F0",
+  "theme_color": "#FF8C00",
+  "icons": []
+}

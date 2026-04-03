@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FFF8F0;
+  --foreground: #3D2B1F;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.timer-ring {
+  transform: rotate(-90deg);
+}
+
+.timer-ring__circle {
+  transition: stroke-dashoffset 1s linear;
+}
+
+.viewfinder {
+  position: relative;
+}
+
+.viewfinder::before,
+.viewfinder::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-color: white;
+}
+
+.viewfinder::before {
+  top: 0;
+  left: 0;
+  border-top: 3px solid;
+  border-left: 3px solid;
+}
+
+.viewfinder::after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 3px solid;
+  border-right: 3px solid;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
