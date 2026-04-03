@@ -32,9 +32,3 @@ export interface Quiz {
 }
 
 export type AppStep = 'camera' | 'result' | 'timer';
-
-export interface TimerState {
-  isRunning: boolean;
-  remainingSeconds: number;
-  totalSeconds: number;
-}

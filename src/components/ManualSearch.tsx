@@ -13,9 +13,7 @@ export function ManualSearch({ onSelected, onBack }: ManualSearchProps) {
   const [query, setQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    inputRef.current?.focus();
-  }, []);
+  useEffect(() => { inputRef.current?.focus(); }, []);
 
   const filtered = query.length >= 1
     ? productsData.products.filter((p) => {
@@ -26,10 +24,8 @@ export function ManualSearch({ onSelected, onBack }: ManualSearchProps) {
 
   return (
     <div className="flex flex-1 flex-col p-4">
-      <div className="mb-4 flex items-center gap-2">
-        <button onClick={onBack} className="text-ramen-500 hover:text-ramen-700">
-          ← 戻る
-        </button>
+      <div className="flex items-center gap-2 mb-4">
+        <button onClick={onBack} className="text-ramen-500 hover:text-ramen-700">← 戻る</button>
         <h2 className="text-lg font-bold text-ramen-700">商品を検索</h2>
       </div>
 
@@ -37,33 +33,27 @@ export function ManualSearch({ onSelected, onBack }: ManualSearchProps) {
         ref={inputRef}
         type="text"
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
+        onChange={e => setQuery(e.target.value)}
         placeholder="商品名やメーカー名"
-        className="w-full rounded-xl border border-ramen-200 bg-white px-4 py-3 text-gray-800 focus:border-ramen-400 focus:outline-none"
+        className="w-full px-4 py-3 bg-white rounded-xl border border-ramen-200 focus:border-ramen-400 focus:outline-none text-gray-800"
       />
 
-      <div className="mt-4 flex-1 space-y-2 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto mt-4 space-y-2">
         {filtered.map((p) => (
           <button
             key={p.id}
             onClick={() => onSelected({
-              productId: p.id,
-              name: p.name,
-              maker: p.maker,
-              optimalTime: p.optimalTime,
-              reason: p.reason,
-              engine: 'fallback',
+              productId: p.id, name: p.name, maker: p.maker,
+              optimalTime: p.optimalTime, reason: p.reason, engine: 'fallback',
             })}
-            className="w-full rounded-xl bg-white px-4 py-3 text-left shadow-sm transition-colors hover:bg-ramen-50"
+            className="w-full text-left px-4 py-3 bg-white rounded-xl hover:bg-ramen-50 transition-colors shadow-sm"
           >
             <div className="font-medium text-gray-800">{p.name}</div>
-            <div className="text-xs text-ramen-500">
-              {p.maker} · {Math.floor(p.optimalTime / 60)}分{p.optimalTime % 60}秒
-            </div>
+            <div className="text-xs text-ramen-500">{p.maker} · {Math.floor(p.optimalTime / 60)}分{p.optimalTime % 60}秒</div>
           </button>
         ))}
         {filtered.length === 0 && (
-          <p className="py-8 text-center text-ramen-400">該当する商品が見つかりません</p>
+          <p className="text-center text-ramen-400 py-8">該当する商品が見つかりません</p>
         )}
       </div>
     </div>

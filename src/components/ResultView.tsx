@@ -20,29 +20,24 @@ export function ResultView({ result, onStartTimer, onReset }: ResultViewProps) {
          result.engine === 'gemini' ? '✨ Gemini 解析結果' : '📋 検索結果'}
       </div>
 
-      <h2 className="mb-1 text-2xl font-bold text-ramen-800">{result.name}</h2>
-      <p className="mb-6 text-ramen-600">{result.maker}</p>
+      <h2 className="text-2xl font-bold text-ramen-800 mb-1">{result.name}</h2>
+      <p className="text-ramen-600 mb-6">{result.maker}</p>
 
-      <div className="mb-6 flex h-40 w-40 flex-col items-center justify-center rounded-full border-4 border-ramen-300 bg-ramen-100">
+      <div className="w-40 h-40 rounded-full bg-ramen-100 flex flex-col items-center justify-center mb-6 border-4 border-ramen-300">
         <span className="text-4xl font-bold text-ramen-700">{timeStr}</span>
         <span className="text-sm text-ramen-500">最適待ち時間</span>
       </div>
 
-      <p className="mb-8 max-w-xs text-sm leading-relaxed text-ramen-700/80">
-        {result.reason}
-      </p>
+      <p className="text-sm text-ramen-700/80 max-w-xs mb-8 leading-relaxed">{result.reason}</p>
 
       <button
         onClick={onStartTimer}
-        className="w-full max-w-xs rounded-2xl bg-ramen-500 py-4 text-lg font-bold text-white shadow-lg transition-all hover:bg-ramen-600 active:scale-95"
+        className="w-full max-w-xs py-4 bg-ramen-500 text-white text-lg font-bold rounded-2xl shadow-lg hover:bg-ramen-600 active:scale-95 transition-all"
       >
         🍜 タイマー開始！
       </button>
 
-      <button
-        onClick={onReset}
-        className="mt-4 text-sm text-ramen-400 transition-colors hover:text-ramen-600"
-      >
+      <button onClick={onReset} className="mt-4 text-ramen-400 text-sm hover:text-ramen-600 transition-colors">
         写真を撮り直す
       </button>
     </div>
