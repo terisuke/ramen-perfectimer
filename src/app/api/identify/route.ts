@@ -1,21 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
 import productsData from '@/data/products.json';
-import type { IdentifyError, IdentifyResponse, Product } from '@/lib/types';
 
-const products = productsData.products as Product[];
+const products = productsData.products;
+const productList = products.map(p => ({ id: p.id, name: p.name, maker: p.maker }));
 
-const productList = products.map((product) => ({
-  id: product.id,
-  name: product.name,
-  maker: product.maker,
-}));
-
-interface ModelIdentifyResult {
-  id: string | null;
-  confidence: number;
+interface IdentifyResult {
+  productId: string;
+  name: string;
+  maker: string;
+  optimalTime: number;
+  reason: string;
+  engine: 'gemma4' | 'gemini' | 'fallback';
 }
 
-async function identifyWithOllama(imageBase64: string): Promise<ModelIdentifyResult | null> {
+async function identifyWithOllama(imageBase64: string): Promise<{ id: string | null; confidence: number } | null> {
   try {
     const systemPrompt = `あなたはカップラーメン専門の画像認識アシスタントです。
 パッケージ写真から商品を特定し、以下のリストから一致するidを返してください。
@@ -42,37 +40,24 @@ JSONのみを出力してください。`;
     });
 
     clearTimeout(timeout);
+    if (!response.ok) return null;
 
-    if (!response.ok) {
-      return null;
-    }
-
-    const data = (await response.json()) as { message?: { content?: string } };
-    const content = data.message?.content || '';
+    const data = await response.json();
+    const content: string = data.message?.content || '';
     const jsonMatch = content.match(/\{[\s\S]*?\}/);
+    if (!jsonMatch) return null;
 
-    if (!jsonMatch) {
-      return null;
-    }
-
-    const parsed = JSON.parse(jsonMatch[0]) as Partial<ModelIdentifyResult>;
-
-    return {
-      id: parsed.id ?? null,
-      confidence: typeof parsed.confidence === 'number' ? parsed.confidence : 0,
-    };
+    const parsed = JSON.parse(jsonMatch[0]);
+    return { id: parsed.id || null, confidence: Number(parsed.confidence) || 0 };
   } catch {
     return null;
   }
 }
 
-async function identifyWithGemini(imageBase64: string, mimeType: string): Promise<ModelIdentifyResult | null> {
+async function identifyWithGemini(imageBase64: string, mimeType: string): Promise<{ id: string | null; confidence: number } | null> {
   try {
     const apiKey = process.env.GEMINI_API_KEY;
-
-    if (!apiKey) {
-      return null;
-    }
+    if (!apiKey) return null;
 
     const { GoogleGenerativeAI } = await import('@google/generative-ai');
     const genAI = new GoogleGenerativeAI(apiKey);
@@ -95,17 +80,10 @@ JSONのみを出力してください。`;
 
     const content = result.response.text();
     const jsonMatch = content.match(/\{[\s\S]*?\}/);
+    if (!jsonMatch) return null;
 
-    if (!jsonMatch) {
-      return null;
-    }
-
-    const parsed = JSON.parse(jsonMatch[0]) as Partial<ModelIdentifyResult>;
-
-    return {
-      id: parsed.id ?? null,
-      confidence: typeof parsed.confidence === 'number' ? parsed.confidence : 0,
-    };
+    const parsed = JSON.parse(jsonMatch[0]);
+    return { id: parsed.id || null, confidence: Number(parsed.confidence) || 0 };
   } catch {
     return null;
   }
@@ -117,9 +95,9 @@ export async function POST(request: NextRequest) {
     const imageFile = formData.get('image');
 
     if (!(imageFile instanceof File)) {
-      return NextResponse.json<IdentifyError>(
+      return NextResponse.json(
         { error: 'NO_IMAGE', message: '画像を送信してください' },
-        { status: 400 },
+        { status: 400 }
       );
     }
 
@@ -130,14 +108,13 @@ export async function POST(request: NextRequest) {
     const ollamaResult = await identifyWithOllama(base64);
 
     let identifiedId: string | null = null;
-    let engine: IdentifyResponse['engine'] = 'gemma4';
+    let engine: 'gemma4' | 'gemini' | 'fallback' = 'gemma4';
 
     if (ollamaResult && ollamaResult.id && ollamaResult.confidence > 0.7) {
       identifiedId = ollamaResult.id;
       engine = 'gemma4';
     } else {
       const geminiResult = await identifyWithGemini(base64, mimeType);
-
       if (geminiResult && geminiResult.id && geminiResult.confidence > 0.7) {
         identifiedId = geminiResult.id;
         engine = 'gemini';
@@ -145,30 +122,21 @@ export async function POST(request: NextRequest) {
     }
 
     if (!identifiedId) {
-      return NextResponse.json<IdentifyError>(
-        {
-          error: 'NOT_FOUND',
-          suggestion: 'manual',
-          message: 'カップラーメンのパッケージ写真を撮ってね',
-        },
-        { status: 404 },
+      return NextResponse.json(
+        { error: 'NOT_FOUND', suggestion: 'manual', message: 'カップラーメンのパッケージ写真を撮ってね' },
+        { status: 404 }
       );
     }
 
-    const product = products.find((item) => item.id === identifiedId);
-
+    const product = products.find(p => p.id === identifiedId);
     if (!product) {
-      return NextResponse.json<IdentifyError>(
-        {
-          error: 'NOT_FOUND',
-          suggestion: 'manual',
-          message: '商品が見つかりませんでした',
-        },
-        { status: 404 },
+      return NextResponse.json(
+        { error: 'NOT_FOUND', suggestion: 'manual', message: '商品が見つかりませんでした' },
+        { status: 404 }
       );
     }
 
-    const result: IdentifyResponse = {
+    const result: IdentifyResult = {
       productId: product.id,
       name: product.name,
       maker: product.maker,
@@ -180,10 +148,9 @@ export async function POST(request: NextRequest) {
     return NextResponse.json(result);
   } catch (error) {
     console.error('Identification error:', error);
-
-    return NextResponse.json<IdentifyError>(
+    return NextResponse.json(
       { error: 'RECOGNITION_FAILED', suggestion: 'manual' },
-      { status: 500 },
+      { status: 500 }
     );
   }
 }
