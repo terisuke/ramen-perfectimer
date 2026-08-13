@@ -2,6 +2,7 @@
 
 import { useRef, useState, useCallback, useEffect } from 'react';
 import type { IdentifyResponse, IdentifyError } from '@/lib/types';
+import { stopMediaTracks } from '@/lib/media-stream';
 
 interface CameraViewProps {
   onIdentified: (data: IdentifyResponse) => void;
@@ -17,7 +18,7 @@ export function CameraView({ onIdentified, onManualSearch }: CameraViewProps) {
   const [error, setError] = useState<string | null>(null);
 
   const stopStream = useCallback(() => {
-    streamRef.current?.getTracks().forEach((track) => track.stop());
+    stopMediaTracks(streamRef.current);
     streamRef.current = null;
     if (videoRef.current) videoRef.current.srcObject = null;
   }, []);
