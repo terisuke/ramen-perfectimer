@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="ラーメン パーフェクトタイマー">
+  <rect width="512" height="512" rx="96" fill="#FF8C00"/>
+  <g fill="none" stroke="#FFF8F0" stroke-width="20" stroke-linecap="round">
+    <path d="M170 150c0-18 14-32 32-32s32 14 32 32"/>
+    <path d="M246 138c0-18 14-32 32-32s32 14 32 32"/>
+    <path d="M322 150c0-18 14-32 32-32s32 14 32 32"/>
+  </g>
+  <path d="M104 224h304a8 8 0 0 1 8 8c0 92-75 167-167 167h-14C143 399 96 324 96 232a8 8 0 0 1 8-8z" fill="#FFF8F0"/>
+  <path d="M136 256h240c-6 66-59 111-120 111S142 322 136 256z" fill="#FF8C00" opacity=".35"/>
+  <circle cx="256" cy="300" r="46" fill="none" stroke="#3A2A1A" stroke-width="16"/>
+  <path d="M256 272v30l20 14" fill="none" stroke="#3A2A1A" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

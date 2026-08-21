@@ -5,6 +5,16 @@ export const metadata: Metadata = {
   title: 'ラーメン パーフェクトタイマー',
   description: 'カップラーメンのパッケージを撮るだけで、完璧な待ち時間がわかる',
   manifest: '/manifest.json',
+  applicationName: 'ラーメン パーフェクトタイマー',
+  appleWebApp: {
+    capable: true,
+    title: 'ラーメンタイマー',
+    statusBarStyle: 'default',
+  },
+  icons: {
+    icon: '/icon.svg',
+    apple: '/icon.svg',
+  },
 };
 
 export const viewport: Viewport = {
